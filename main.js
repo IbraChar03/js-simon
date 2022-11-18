@@ -1,15 +1,9 @@
 const myArrNum1 = genArr(5, 1, 100);
 let num = document.getElementById("num1").innerHTML=myArrNum1;
 console.log(num);
-let inp0 = document.getElementById("inp0");
-let inp1 = document.getElementById("inp1");
-let inp2 = document.getElementById("inp2");
-let inp3 = document.getElementById("inp3");
-let inp4 = document.getElementById("inp4");
 
 let button = document.getElementById("control");
 let riprova = document.getElementById("riprova");
-
 
 let intervallo = setTimeout(function(){
     myFunction();
@@ -18,17 +12,22 @@ let intervallo = setTimeout(function(){
 
 button.addEventListener("click",
 function(){
-    inp0 = parseInt(document.getElementById("inp0").value);
-    inp1 = parseInt(document.getElementById("inp1").value);
-    inp2 = parseInt(document.getElementById("inp2").value);
-    inp3 = parseInt(document.getElementById("inp3").value);
-    inp4 = parseInt(document.getElementById("inp4").value);
-    for(n = 0; n < 5; n++){
+    let inp0 = parseInt(document.getElementById("inp0").value);
+    let inp1 = parseInt(document.getElementById("inp1").value);
+    let inp2 = parseInt(document.getElementById("inp2").value);
+    let inp3 = parseInt(document.getElementById("inp3").value);
+    let inp4 = parseInt(document.getElementById("inp4").value);
+    for(let n = 0; n < 5; n++){
         if( eval('inp' + n) === myArrNum1[n]){
-            let stampaRis = document.getElementById("res").innerHTML = `Hai indovinato ${n+1}  numeri`
+            let stampaRis = document.getElementById("res").innerHTML = `Hai indovinato il numero ${myArrNum1[n]}`
         }
-  
     }
+         if( inp0 !== myArrNum1[0] && inp1 !== myArrNum1[1] && inp2 !== myArrNum1[2] && inp3 !== myArrNum1[3] && inp4 !== myArrNum1[4]){
+        let stampaRis = document.getElementById("res").innerHTML = `Hai sbagliato tutti i numeri`
+        }
+         
+     
+    
     
 }
 );
