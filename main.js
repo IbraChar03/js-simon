@@ -2,7 +2,7 @@ const myArrNum1 = genArr(5, 1, 100);
 let num = document.getElementById("num1").innerHTML=myArrNum1;
 console.log(num);
 let inp0 = document.getElementById("inp0");
-let inp1= document.getElementById("inp1");
+let inp1 = document.getElementById("inp1");
 let inp2 = document.getElementById("inp2");
 let inp3 = document.getElementById("inp3");
 let inp4 = document.getElementById("inp4");
@@ -29,17 +29,7 @@ function(){
         }
   
     }
-   
-    //  if (inp1 === myArrNum1[0]){
-    //      let stampaRis = document.getElementById("res").innerHTML = "Hai indovinato solo il primo numero"
-    //  }
-    //  else if (inp2 === myArrNum1[1]){
-    //     let stampaRis = document.getElementById("res").innerHTML = "Hai indovinato solo il secondo numero"
-    //  }
-    //  else if (inp3 === myArrNum1[2]){
-    //     let stampaRis = document.getElementById("res").innerHTML = "Hai indovinato solo il terzo numero"
-    //  }
-     
+    
 }
 );
  riprova.addEventListener("click",
