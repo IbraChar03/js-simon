@@ -7,7 +7,7 @@ let riprova = document.getElementById("riprova");
 
 let intervallo = setTimeout(function(){
     myFunction();
- }, 3000)
+ }, 30000);
 
 
 button.addEventListener("click",
@@ -19,7 +19,7 @@ function(){
     let inp4 = parseInt(document.getElementById("inp4").value);
     for(let n = 0; n < 5; n++){
         if( eval('inp' + n) === myArrNum1[n]){
-            let stampaRis = document.getElementById("res").innerHTML = `Hai indovinato ${n+1} numero/i`
+            let stampaRis = document.getElementById("res").innerHTML = `Hai indovinato ${n+1}  numero/i`
         }
     }
          if( inp0 !== myArrNum1[0] && inp1 !== myArrNum1[1] && inp2 !== myArrNum1[2] && inp3 !== myArrNum1[3] && inp4 !== myArrNum1[4]){
