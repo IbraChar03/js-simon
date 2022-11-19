@@ -14,7 +14,7 @@ let riprova = document.getElementById("riprova");
 
 let intervallo = setTimeout(function(){
     myFunction();
- }, 30000);
+ }, 3000);
 
 
 button.addEventListener("click",
@@ -24,14 +24,20 @@ function(){
     let inp2 = parseInt(document.getElementById("inp2").value);
     let inp3 = parseInt(document.getElementById("inp3").value);
     let inp4 = parseInt(document.getElementById("inp4").value);
-    for(let n = 0; n < 5; n++){
-        if( eval('inp' + n) === myArrNum1[n]){
-            let stampaRis = document.getElementById("res").innerHTML = `Hai indovinato ${n+1} numeri`
-        }
+    let arrayUtente = [inp0,inp1,inp2,inp3,inp4];
+    let numeriInComune=myArrNum1.filter(x => arrayUtente.includes(x));
+    if(numeriInComune.length == 5){
+        document.getElementById("res").innerHTML="Hai indovinato tutti i numeri";
+        console.log("Hai indovinato tutti i numeri");
     }
-         if( inp0 !== myArrNum1[0] && inp1 !== myArrNum1[1] && inp2 !== myArrNum1[2] && inp3 !== myArrNum1[3] && inp4 !== myArrNum1[4]){
-        let stampaRis = document.getElementById("res").innerHTML = `Hai sbagliato tutti i numeri`
-        }    
+    else if(numeriInComune.length == 1){
+        document.getElementById("res").innerHTML=`hai indovinato solo 1 numero. Il numero che hai indovinato è ${numeriInComune}`;
+        console.log(`hai indovinato solo ${numeriInComune.length} numeri. I numeri che hai indovinato sono ${numeriInComune}`);
+    }
+    else {
+        document.getElementById("res").innerHTML=`hai indovinato solo ${numeriInComune.length} numeri. I numeri che hai indovinato sono ${numeriInComune}`;
+        console.log(`hai indovinato solo ${numeriInComune.length} numeri. I numeri che hai indovinato sono ${numeriInComune}`);
+    }
         
 }
 );
@@ -68,6 +74,5 @@ function myFunction() {
     const nodes = document.querySelectorAll("h1");
     nodes.forEach(node => node.style.display="none");
   }
-
 
 
