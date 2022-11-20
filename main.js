@@ -14,7 +14,7 @@ let riprova = document.getElementById("riprova");
 
 let intervallo = setTimeout(function(){
     myFunction();
- }, 3000);
+ }, 30000);
 
 
 button.addEventListener("click",
@@ -31,13 +31,13 @@ function(){
         console.log("Hai indovinato tutti i numeri");
     }
     else if(numeriInComune.length == 1){
-        document.getElementById("res").innerHTML = `hai indovinato solo 1 numero. Il numero che hai indovinato è ${numeriInComune}`;    
+        document.getElementById("res").innerHTML = `Hai indovinato solo 1 numero. Il numero che hai indovinato è ${numeriInComune}`;    
     }
     else if(numeriInComune.length == 0){
-        document.getElementById("res").innerHTML = `hai sbagliato tutti i numeri`;  
+        document.getElementById("res").innerHTML = `Hai sbagliato tutti i numeri`;  
     }
     else {
-        document.getElementById("res").innerHTML = `hai indovinato solo ${numeriInComune.length} numeri. I numeri che hai indovinato sono ${numeriInComune}`;
+        document.getElementById("res").innerHTML = `Hai indovinato solo ${numeriInComune.length} numeri. I numeri che hai indovinato sono ${numeriInComune}`;
     }
         
 }
