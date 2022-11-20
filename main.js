@@ -33,6 +33,9 @@ function(){
     else if(numeriInComune.length == 1){
         document.getElementById("res").innerHTML = `hai indovinato solo 1 numero. Il numero che hai indovinato è ${numeriInComune}`;    
     }
+    else if(numeriInComune.length == 0){
+        document.getElementById("res").innerHTML = `hai sbagliato tutti i numeri`;  
+    }
     else {
         document.getElementById("res").innerHTML = `hai indovinato solo ${numeriInComune.length} numeri. I numeri che hai indovinato sono ${numeriInComune}`;
     }
