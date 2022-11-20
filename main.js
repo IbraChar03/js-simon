@@ -76,6 +76,10 @@ function myFunction() {
     nodes.forEach(node => node.style.display = "none");
     const nodes2 = document.querySelectorAll("input");
     nodes2.forEach(nodes2 => nodes2.readOnly = false);
+    const nodes3 = document.querySelectorAll("#numeri");
+    nodes3.forEach(nodes3 => nodes3.style.display = "none");
+    const nodes4 = document.querySelectorAll(".text");
+    nodes4.forEach(nodes4 => nodes4.style.width = "100%");
   }
 
 

@@ -9,6 +9,7 @@ main{
     align-items: center;
     height: 100vh;
     width: 100%;
+    
 }
 .container{
     width: 50%;
@@ -17,14 +18,25 @@ main{
     padding: 10px;
     display: flex;
     flex-direction: row;
-    padding-right: 80px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 50px; 
 }
 .text{
   height: 100%;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+.result{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #title{
     margin-bottom: 10px;
