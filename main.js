@@ -16,7 +16,6 @@ let intervallo = setTimeout(function(){
     myFunction();
  }, 30000);
 
-
 button.addEventListener("click",
 function(){
     let inp0 = parseInt(document.getElementById("inp0").value);
@@ -73,7 +72,11 @@ function reloadPagina(){
 
 function myFunction() {
     const nodes = document.querySelectorAll("h1");
-    nodes.forEach(node => node.style.display="none");
+    nodes.forEach(node => node.style.display = "none");
+    const nodes2 = document.querySelectorAll("input");
+    nodes2.forEach(nodes2 => nodes2.readOnly = false);
   }
+
+
 
 
